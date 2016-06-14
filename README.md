@@ -1,7 +1,13 @@
 # registerchemacquire
 % read images, these images are already greyscale images
-A = imread('fix.TIF');
-B = imread('move.TIF');
+% A = imread('fix.TIF');
+% B = imread('move.TIF');
+
+% read image from multipage TIF image directly: A is the 2nd image of 3.TIF; B is the 20th image of 3.TIF
+
+A=imread('3.TIF',2);
+
+B=imread('3.TIF',20);
 
 %if fixed is brighter than moving, then it is magneta, otherwise, it is green
 % figure, imshowpair(A,B)
